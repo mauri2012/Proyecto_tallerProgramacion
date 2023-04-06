@@ -5,16 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="">
-    <title>Zapateria Lezana</title>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="shortcut icon" href="assets/img/icon/favicon.ico">
+    <title>Zapateria Lezana</title>
 </head>
 <body>
     <section class="container-fluid px-0  sticky-md-top ">
         <nav class="row navbar px-0 mx-0 navbar-expand-sm bg-dark navbar-dark ">
-        <div class="col-sm-2 col-lg-1 ps-2 container pe-0 mx-0">
-				<a class="navbar-brand" href="#">Logo</a>
+        <div class="col-xs-12 col-sm-2 col-lg-1 ps-2 container pe-0 mx-0">
+				<img class="navbar-brand mx-auto" src="assets/img/icon/apple-icon-60x60.png">
 			</div>
-			<div class="container col-sm-2 col-lg-8 ps-0 navbar-header text-primary ">ZAPATILLAS LEZANA</div>
+			<div class="container col-sm-2 col-lg-8 ps-0 navbar-header text-primary ">
+				<p class="mx-auto mx-md-0">ZAPATILLAS LEZANA</p>
+			</div>
 		    <div class="col-sm-8 col-lg-3 container-fluid">
 			    <ul class="navbar-nav">
 					<li class="nav-item"><a class="nav-link" href="#">Home</a></li>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,14 @@
     <title>Zapateria Lezana</title>
 </head>
 <body>
+	<header>
+		<nav class="bg-dark">
+			<div class="d-flex flex-row-reverse">
+				<button class="btn btn-success mx-2">sign up</button>
+				<button class="btn btn-primary">log in</button>
+			</div>
+		</nav>
+	</header>
     <section class="container-fluid px-0  sticky-md-top ">
         <nav class="row navbar px-0 mx-0 navbar-expand-sm bg-dark navbar-dark ">
         <div class="col-xs-12 col-sm-2 col-lg-1 ps-2 container pe-0 mx-0">
@@ -70,106 +79,16 @@
         <p>Estamos en Buenos Aires,Corrientes,Cacho Y Misiones. Somos una empresa en crecimiento y nos gustaria expandirnos al resto de Argentina </p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, iure eaque incidunt iste accusamus error quos nemo ad tenetur qui ex ratione laboriosam. Sunt accusantium corporis laboriosam tempore deleniti alias.</p>
     </section>
-    <div class="container-fluid mt-5 px-0 fixed-bottomrow ">
-		<!-- Footer -->
-		<footer
-				class="text-center text-lg-start text-white"
-				style="background-color: #45526e"
-				>
-		  <!-- Grid container -->
-		  <div class="container-fluid p-0 pb-0">
-			<!-- Section: Links -->
-			<section class="px-0">
-			  <!--Grid row-->
-			  <div class="container row "> 
-				<!-- Grid column -->
-				<div class="col-md-3 col-lg-2 col-xl-3 mx-auto mt-3 ">
-				  <h6 class="text-uppercase mb-4 font-weight-bold">
-					Who we are?
-				  </h6>
-				  <p>
-					we're a company who is willing to give our costumers the best comfor at the best prices.
-					There are tons steps to make,why dont start with a good shoe?
-					 
-				  </p>
-				</div>
-				<!-- Grid column -->
-	  
-				<hr class="w-100 clearfix d-md-none" />
-	  
-				<!-- Grid column 
-				<div class="col-md-2 col-lg-2 col-xl-3 mx-auto mt-3">
-				  <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-				  <p>
-					<a class="text-white">MDBootstrap</a>
-				  </p>
-				  <p>
-					<a class="text-white">MDWordPress</a>
-				  </p>
-				  <p>
-					<a class="text-white">BrandFlow</a>
-				  </p>
-				  <p>
-					<a class="text-white">Bootstrap Angular</a>
-				  </p>
-				</div>
-				<!-- Grid column -->
-	  
-				<hr class="w-100 clearfix d-md-none" />
-	  
-				<!-- Grid column -->
-				<div class="col-md-3 col-lg-2 col-xl-3 mx-auto mt-3">
-				  <h6 class="text-uppercase mb-4 font-weight-bold">
-					Useful links
-				  </h6>
-				  <p>
-					<a class="text-white">Your Account</a>
-				  </p>
-				  <p>
-					<a class="text-white">Become an Affiliate</a>
-				  </p>
-				  <p>
-					<a class="text-white">Shipping Rates</a>
-				  </p>
-				  <p>
-					<a class="text-white">Help</a>
-				  </p>
-				</div>
-	  
-				<!-- Grid column -->
-				<hr class="w-100 clearfix d-md-none" />
-	  
-				<!-- Grid column -->
-				<div class="col-md-4 col-lg-3 col-xl-3 mx-auto px-0 mt-3">
-				  <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-				  <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-				  <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-				  <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-				  <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-				</div>
-				<!-- Grid column -->
-				<!-- Grid column -->
-				  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto px-0 mt-3">
-				  <h6 class="text-uppercase mb-4 font-weight-bold">where to find us</h6>
-				  <p><i class="fas fa-home mr-3"></i> Corrientes,Corrientes, Junin 750,AR</p>
-				  <p><i class="fas fa-home mr-3"></i> Chaco, Resistencia Sarmiento 893, AR</p
-				  <p><i class="fas fa-home mr-3"></i> Buenos Aires,La Plata, calle falsa 150, AR</p
-				  <p><i class="fas fa-home mr-3"></i> Misiones, Iguazu, calle principal 300, AR</p
-				</div>
-				<!-- Grid column -->
-			  </div>
-			  <!--Grid row-->
-			</section>
-			<!-- Section: Links -->
-	  
-
-			  </div>
-			</section>
-			<!-- Section: Copyright -->
-		  </div>
-		  <!-- Grid container -->
-		</footer>
-		<!-- Footer -->
-	  </div> 
+	<footer>
+    	<nav class="row navbar px-0 mx-0 navbar-expand-sm bg-dark navbar-dark ">
+			<div class="col-sm-8 col-lg-6 container-fluid">
+			    <ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="#">quienes somos</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">informacion de contacto</a></li>
+				    <li class="nav-item"><a class="nav-link " href="#">terminos y usos</a></li>
+			    </ul>
+			</div>
+        </nav>
+	</footer>
 </body>
 </html>

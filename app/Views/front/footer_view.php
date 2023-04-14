@@ -1,4 +1,4 @@
-    <footer >
+    <footer class >
     	<nav class="row navbar px-0 mx-0 navbar-expand-sm bg-dark navbar-dark ">
 			<div class="col-sm-8 col-lg-6 container-fluid">
 			    <ul class="navbar-nav">

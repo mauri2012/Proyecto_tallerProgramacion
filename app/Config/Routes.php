@@ -33,6 +33,9 @@ $routes->get('/', 'Home::index');
 $routes->get('/quienessomos','Home::quienes_somos');
 $routes->get('/contacto','Home::contacto');
 $routes->get('/terminos_usos','Home::terminos_y_usos');
+$routes->get('/producto','Home::producto');
+$routes->get('/log_in','Home::logearse');
+$routes->get('/sign_up','Home::registrarse');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

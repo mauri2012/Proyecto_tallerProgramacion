@@ -1,6 +1,6 @@
-<section class="container">
+<section class="container my-5">
     <h2 class="bold">Contacto</h2>
-    <p>¡Hola! Nos encanta estar en contacto con nuestros clientes y responder cualquier pregunta que puedan tener. Si deseas contactarnos, por favor utiliza cualquiera de las siguientes opciones:</p>
+    <p class="mb-2">¡Hola! Nos encanta estar en contacto con nuestros clientes y responder cualquier pregunta que puedan tener. Si deseas contactarnos, por favor utiliza cualquiera de las siguientes opciones:</p>
     <ul>
         <li>Correo electrónico: envía un correo electrónico a nuestro equipo de atención al cliente a la dirección [inserta aquí tu dirección de correo electrónico]. Nos esforzamos por responder a todos los correos electrónicos en un plazo de 24 horas.</li>
         <li>

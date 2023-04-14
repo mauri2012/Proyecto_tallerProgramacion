@@ -32,5 +32,26 @@ class Home extends BaseController
         echo view('front/terminos_y_usos.php');
         echo view('front/footer_view.php');
     }
+    public function producto(){
+        $data['titulo']='producto';
+        echo view('front/head_view.php',$data);
+        echo view('front/nav_view.php');
+        echo view('front/producto.php');
+        echo view('front/footer_view.php');
+    }
+    public function logearse(){
+        $data['titulo']='log in';
+        echo view('front/head_view.php',$data);
+        echo view('front/nav_view.php');
+        echo view('front/log_in.php');
+        echo view('front/footer_view.php');
+    }
+    public function registrarse(){
+        $data['titulo']='sign up';
+        echo view('front/head_view.php',$data);
+        echo view('front/nav_view.php');
+        echo view('front/sign_up.php');
+        echo view('front/footer_view.php');
+    }
 }
 ?>

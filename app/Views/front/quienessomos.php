@@ -1,4 +1,4 @@
-<section class="container text-justify">
+<section class="container text-justify my-5">
     <h2 class="bold">¿Quienes somos?</h2>
     <p>Bienvenidos a nuestra tienda de zapatillas en Argentina. Somos un equipo de apasionados por el calzado y la moda deportiva, comprometidos con brindar la mejor experiencia de compra a nuestros clientes.</p>
     <p>

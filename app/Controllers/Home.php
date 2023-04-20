@@ -8,7 +8,7 @@ class Home extends BaseController
         $data['titulo']='Zapateria Lezana';
         echo view('front/head_view.php',$data);
         echo view('front/nav_view.php');
-        echo view('front/nueva_plantilla.php');
+        echo view('front/pagina_principal.php');
         echo view('front/footer_view.php');
     }
     public function quienes_somos(){
@@ -51,6 +51,13 @@ class Home extends BaseController
         echo view('front/head_view.php',$data);
         echo view('front/nav_view.php');
         echo view('front/sign_up.php');
+        echo view('front/footer_view.php');
+    }
+    public function carrito(){
+        $data['titulo']='sign up';
+        echo view('front/head_view.php',$data);
+        echo view('front/nav_view.php');
+        echo view('front/shopping_cart.php');
         echo view('front/footer_view.php');
     }
 }

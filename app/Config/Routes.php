@@ -36,6 +36,7 @@ $routes->get('/terminos_usos','Home::terminos_y_usos');
 $routes->get('/producto','Home::producto');
 $routes->get('/log_in','Home::logearse');
 $routes->get('/sign_up','Home::registrarse');
+$routes->get('/shopping','Home::carrito');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

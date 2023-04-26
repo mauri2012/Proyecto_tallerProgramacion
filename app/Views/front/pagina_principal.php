@@ -12,10 +12,10 @@
             <!-- The slideshow/carousel -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/img/img_carousel/primerImg.jpg" alt="zapatilla1" class="d-block w-100 mx-auto">
+                    <img src="assets/img/img_carousel/segundaImg.jpg" alt="zapatilla1" class="d-block w-100 mx-auto">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img/img_carousel/segundaImg.jpg" alt="zapatilla2" class="d-block w-100 mx-auto">
+                    <img src="assets/img/img_carousel/cuartaImg.jpg" alt="zapatilla2" class="d-block w-100 mx-auto mh-50">
                 </div>
                 <div class="carousel-item">
                     <img src="assets/img/img_carousel/terceraImg.jpg" alt="zapatilla3" class="d-block w-100 mx-auto">
@@ -34,7 +34,7 @@
  
     <section class="row container-fluid py-5 px-5 mx-0" style="background-color:#f2c1ac">
         <img src="assets/img/img_principal.svg" alt="triangle with all three sides equal"
-        class="col-lg-6" >
+        class="col-lg-6 border" >
         <div class="col-lg-6">
         <p class="text-center fw-bold text-uppercase fsc-italic">El mejor lugar para comprar zapatos</p>
         <p>
@@ -73,6 +73,6 @@
 
         </div>
         <img src="assets/img/img_principal2.svg" alt="triangle with all three sides equal"
-        class="col-lg-6" >
+        class="col-lg-6 border" >
     </section>
 </html>

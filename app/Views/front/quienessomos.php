@@ -1,4 +1,5 @@
-<section class="container text-justify my-5 ">
+<section class="container-fluid text-justify py-5 "  style="background-color:#f3a1a0">
+    <div class="container">
     <h2 class="bold">¿Quienes somos?</h2>
     <p>Bienvenidos a nuestra tienda de zapatillas en Argentina. Somos un equipo de apasionados por el calzado y la moda deportiva, comprometidos con brindar la mejor experiencia de compra a nuestros clientes.</p>
     <p>
@@ -13,10 +14,12 @@
     <p>
     ¡Gracias por confiar en nosotros y esperamos verte pronto en nuestra tienda!
     </p>
+    </div>
 </section>
-<section class="container text-justify  pb-5">
+<section class="container-fluid text-justify  py-5  "style="background-color:#f2c1ac">
+    <div class="container">
     <h2 class="bold">Trayectoria</h2>
-    <p>Nuestra página web de zapatillas fue fundada en [fecha de fundación] con el objetivo de proporcionar a los amantes de las zapatillas una plataforma fácil y accesible para adquirir los mejores modelos del mercado. Desde entonces, hemos estado comprometidos con nuestra visión de ofrecer la mejor experiencia de compra en línea de zapatillas.
+    <p>Nuestra página web de zapatillas fue fundada el 21 de abril de 2013 con el objetivo de proporcionar a los amantes de las zapatillas una plataforma fácil y accesible para adquirir los mejores modelos del mercado. Desde entonces, hemos estado comprometidos con nuestra visión de ofrecer la mejor experiencia de compra en línea de zapatillas.
     Nos esforzamos por ofrecer una amplia variedad de zapatillas de las marcas más reconocidas del mercado, tanto nacionales como internacionales, para que nuestros clientes encuentren el modelo perfecto que se adapte a sus necesidades y estilo de vida.
     </p>
     <p>
@@ -31,4 +34,5 @@
     <p>
     Hoy en día, nuestra página web de zapatillas es una de las más populares en su categoría, y nos enorgullecemos de haber creado una comunidad de clientes felices y satisfechos. Nos esforzamos continuamente por mejorar y crecer, manteniendo nuestra visión original de ser la mejor plataforma de compra en línea de zapatillas.
     </p>
+    </div>
 </section>

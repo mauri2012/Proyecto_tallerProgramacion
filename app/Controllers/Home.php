@@ -43,7 +43,7 @@ class Home extends BaseController
         $data['titulo']='log in';
         echo view('front/head_view.php',$data);
         echo view('front/nav_view.php');
-        echo view('front/log_in.php');
+        echo view('front/logeo_view.php');
         echo view('front/footer_view.php');
     }
     public function registrarse(){

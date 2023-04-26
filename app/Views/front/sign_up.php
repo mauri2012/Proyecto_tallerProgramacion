@@ -1,33 +1,35 @@
-<section class="container my-5">
+<section class="container-fluid py-5 " style="background-color:#f3a1a0">
     <div class="row">
     <div class="col-md-4"></div>
-    <div class="col-md-4">
-    <h2>sign up</h2>
+    <div class="col-md-4 border p-3" style="background:white">
+    <h2>Registrarse</h2>
     <form action="">
         <div class="my-3">
-            <label class="form-label" >Name:</label>
-            <input class="form-control" type="text" placeholder="Enter name" name="name" required>
+            <label class="form-label" >Nonmbre:</label>
+            <input class="form-control" type="text" placeholder="Ingrese Nombre" name="name" required>
         </div>
         <div class="my-3">
             <label class="form-label" >Email:</label>
-            <input class="form-control" type="email" placeholder="Enter email" name="email" required>
+            <input class="form-control" type="email" placeholder="Ingrese Email" name="email" required>
         </div>
         <div class="my-3">
-            <label class="form-label" >Password:</label>
-            <input class="form-control" type="password" placeholder="Enter password" name="pswd" required>
+            <label class="form-label" >Contraseña:</label>
+            <input class="form-control" type="password" placeholder="Ingrese Contraseña" name="pswd" required>
         </div>
         <div class="my-3">
-            <label class="form-label" >Repit Password:</label>
-            <input class="form-control" type="password" placeholder="Enter password" name="pswdAgain" required>
+            <label class="form-label" >Repita Contraseña:</label>
+            <input class="form-control" type="password" placeholder="Ingrese Contraseña" name="pswdAgain" required>
         </div>
         <div class="my-3">
-            <label class="form-label" >date of birth:</label>
+            <label class="form-label" >dia de nacimiento:</label>
             <input class="form-control" type="date" name="birthday" required>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="reset" class="btn btn-success">reset</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="reset" class="btn btn-success">reiniciar</button>
     </form>
-    <a href="<?php echo base_url('log_in')?>">already have an account?log in</a>
+    <a href="<?php echo base_url('log_in')?>">¿ya tienes una cuenta?Inicia Sesion</a>
     </div>
     </div>
+    
+
 </section>

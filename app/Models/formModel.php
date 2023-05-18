@@ -8,6 +8,10 @@ class formModel extends Model{
     protected $primaryKey='id';
     protected $allowedFields=['nombre','apellido','email','usuario','pass','perfil_id','baja','created_at'];
 
+<<<<<<< Updated upstream
+=======
+    
+>>>>>>> Stashed changes
 
 }
 

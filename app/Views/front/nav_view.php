@@ -17,21 +17,30 @@
 					<span class="navbar-toggler-icon"></span>
     			</button>
 		    </div>
+			<?php if(session()->get('logged_in')){?>
+			<!-- si es un usuario logeado-->
 			<nav class="collapse navbar-collapse col-sm-5 col-md-5 col-lg-7 row mx-0 my-auto" id="navbarToggle">
-			    <ul class="navbar-nav col-7 ">
+			    <ul class="navbar-nav col-6 col-md-7 ">
 					<li class="nav-item"><a class="nav-link" href="<?php echo base_url('')?>">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="<?php echo base_url('producto');?>"><i class="bi bi-shop-window"></i></a></li>
 				    <li class="nav-item"><a class="nav-link " href="<?php echo base_url('shopping');?>">					
 						<i class="bi bi-basket2-fill"></i>
 					</a></li>
+					<?php if() ?>
 			    </ul>
-			
-				<div class="col-5 ">
+				<div class="col-6 col-md-5 ">
+				<a type="submit" class="btn btn-danger" href="<?php echo base_url('/log_out')?>">log out</a>
+				</div>
+			</nav>
+			<?php } else {?>	
+				<!-- si no esta logeado-->
+				<div class="col-6 col-md-5 ">
 					<a class="btn btn-primary mx-1 my-1" href="<?php echo base_url('log_in')?>" role="button">Iniciar Sesion</a>
 					<a class="btn btn-success mx-1" href="<?php echo base_url('sign_up')?>" role="button">Registrarse</a>
 				</div>
-			</nav>
+			<?php }?>
 			
         </nav>
+		
 	</section>
 </header>

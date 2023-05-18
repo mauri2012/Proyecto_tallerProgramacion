@@ -35,7 +35,7 @@
     <section class="row container-fluid py-5 px-5 mx-0" style="background-color:#f2c1ac">
         <img src="assets/img/img_principal.svg" alt="triangle with all three sides equal"
         class="col-lg-6 border" >
-        <div class="col-lg-6">
+        <div class="col-lg-6"  style="text-align: justify;">
         <p class="text-center fw-bold text-uppercase fsc-italic">El mejor lugar para comprar zapatos</p>
         <p>
             ¡Bienvenido a nuestra zapatillería! Somos una tienda especializada en ofrecer una amplia variedad de zapatillas de alta calidad y estilo para hombres, mujeres y niños. En nuestra tienda, nos enorgullecemos de ofrecer una experiencia de compra cómoda y personalizada para nuestros clientes.
@@ -56,8 +56,8 @@
     </section>
     <section class="row container-fluid py-5 px-5 mx-0" style="background-color:#f3a1a0">
 
-        <div class="col-lg-6">
-        <p class="text-center fw-bold text-uppercase fsc-italic">Acerca de nosotros</p>
+        <div class="col-lg-6"  style="text-align: justify;">
+        <p class="text-center fw-bold text-uppercase fsc-italic" ">Acerca de nosotros</p>
         <p>
         En nuestra zapatería, creemos que el calzado es más que un simple accesorio. Los zapatos son una parte fundamental de nuestra vida diaria, ya que nos permiten expresarnos y sentirnos cómodos en cualquier situación. 
         </p>

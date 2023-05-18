@@ -34,9 +34,15 @@ $routes->get('/quienessomos','Home::quienes_somos');
 $routes->get('/contacto','Home::contacto');
 $routes->get('/terminos_usos','Home::terminos_y_usos');
 $routes->get('/producto','Home::producto');
-$routes->get('/log_in','Home::logearse');
-$routes->get('/sign_up','Home::registrarse');
 $routes->get('/shopping','Home::carrito');
+
+//registro
+$routes->get('/sign_up', 'Usuario_controller::create');
+$routes->post('/enviar-form', 'Usuario_controller::formValidation');
+//log in
+$routes->get('/log_in','login_controller');
+$routes->post('/enviar-login','login_controller::auth');
+$routes->get('/log_out','login_controller::logout');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

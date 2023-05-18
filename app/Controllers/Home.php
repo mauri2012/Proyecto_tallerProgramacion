@@ -39,15 +39,6 @@ class Home extends BaseController
         echo view('front/producto.php');
         echo view('front/footer_view.php');
     }
-
-    public function registrarse(){
-        $data['titulo']='sign up';
-        echo view('front/head_view.php',$data);
-        echo view('front/nav_view.php');
-        echo view('back/usuario/sign_up.php');
-    
-        echo view('front/footer_view.php');
-    }
     public function carrito(){
         $data['titulo']='sign up';
         echo view('front/head_view.php',$data);

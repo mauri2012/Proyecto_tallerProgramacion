@@ -1,4 +1,4 @@
-<section class="container-fluid text-justify py-5 "  style="background-color:#f3a1a0">
+<section class="container-fluid  py-5 "  style="background-color:#f3a1a0; text-align: justify;">
     <div class="container">
     <h2 class="bold">¿Quienes somos?</h2>
     <p>Bienvenidos a nuestra tienda de zapatillas en Argentina. Somos un equipo de apasionados por el calzado y la moda deportiva, comprometidos con brindar la mejor experiencia de compra a nuestros clientes.</p>
@@ -16,7 +16,7 @@
     </p>
     </div>
 </section>
-<section class="container-fluid text-justify  py-5  "style="background-color:#f2c1ac">
+<section class="container-fluid text-justify  py-5  "style="background-color:#f2c1ac; text-align: justify;">
     <div class="container">
     <h2 class="bold">Trayectoria</h2>
     <p>Nuestra página web de zapatillas fue fundada el 21 de abril de 2013 con el objetivo de proporcionar a los amantes de las zapatillas una plataforma fácil y accesible para adquirir los mejores modelos del mercado. Desde entonces, hemos estado comprometidos con nuestra visión de ofrecer la mejor experiencia de compra en línea de zapatillas.

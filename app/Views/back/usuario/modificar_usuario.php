@@ -11,11 +11,12 @@
       <button type='button' class='btn-close' data-bs-dismiss='alert'></button>" . session()->getFlashdata('success') . "
     </div>";
     } ?> 
-    <h2>Registrarse</h2>
-    <form method="post" action="<?php echo base_url('/enviar-form') ?>">
+    <h2>Modificar usuario</h2>
+    <form method="post" action="<?php echo base_url('/cambios-form') ?>">
         <div class="my-3">
+        <input class="form-control" type="hidden" placeholder="Ingrese Nombre" value="<?php echo set_value('id',$datos['id']);?>" name="id" >            
             <label class="form-label" >Nombre:</label>
-            <input class="form-control" type="text" placeholder="Ingrese Nombre" value="<?php echo set_value('nombre')?>" name="nombre" >
+            <input class="form-control" type="text" placeholder="Ingrese Nombre" value="<?php echo set_value('nombre',$datos['nombre']);?>" name="nombre" >
             <!-- Error -->
           <?php if ($validation->getError('nombre')) { ?>
             <div class='alert alert-danger mt-2'>
@@ -25,7 +26,7 @@
         </div>
         <div class="mb-3">
           <label for="apellido" class="form-label">Apellido</label>
-          <input type="text" name="apellido" class="form-control" value="<?php echo set_value('apellido')?>" placeholder="Apellido">
+          <input type="text" name="apellido" class="form-control" value="<?php echo set_value('apellido',$datos['apellido'])?>" placeholder="Apellido">
           <!-- Error -->
           <?php if ($validation->getError('apellido')) { ?>
             <div class='alert alert-danger mt-2'>
@@ -35,7 +36,7 @@
         </div>
         <div class="my-3">
             <label class="form-label" >Email:</label>
-            <input class="form-control" type="email" placeholder="Ingrese Email" name="email" value="<?php echo set_value('email') ?>">
+            <input class="form-control" type="email" placeholder="Ingrese Email" name="email" value="<?php echo set_value('email',$datos['email']) ?>">
             <!-- Error-->
             <?php if($validation->getError('email')){?>
               <div class="alert alert-danger mt-2">
@@ -45,7 +46,7 @@
         </div>
         <div class="mb-3">
           <label for="usuario" class="form-label">Usuario</label>
-          <input type="text" name="usuario" value="<?php echo set_value('usuario')?>" class="form-control" placeholder="Usuario">
+          <input type="text" name="usuario" value="<?php echo set_value('usuario',$datos['usuario'])?>" class="form-control" placeholder="Usuario">
           <!-- Error -->
           <?php if ($validation->getError('usuario')) { ?>
             <div class='alert alert-danger mt-2'>
@@ -54,21 +55,21 @@
           <?php } ?>
         </div>
         <div class="my-3">
-            <label class="form-label" >Contraseña:</label>
-            <input class="form-control" type="password" placeholder="Ingrese Contraseña" name="pass">
-            <?php if($validation->getError('pass')){?>
+             <label class="form-label" >perfil_id:</label>
+            <input class="form-control" type="text" placeholder="perfil" value="<?php echo set_value('perfil_id',$datos['perfil_id'])?>" name="perfil_id">
+            <?php if($validation->getError('perfil_id')){?>
               <div class="alert alert-danger mt-2">
-                  <?= $error=$validation->getError('pass');?>
+                  <?= $error=$validation->getError('perfil_id');?>
               </div>
             <?php }?>
         </div>
         <div class="my-3">
-            <label class="form-label" >Repita Contraseña:</label>
-            <input class="form-control" type="password" placeholder="Ingrese Contraseña" name="passR">
+            <label class="form-label" >baja:</label>
+            <input class="form-control" type="text" placeholder="" value="<?php echo set_value('baja',$datos['baja'])?>" name="baja">
   
-            <?php if($validation->getError('passR')){?>
+            <?php if($validation->getError('baja')){?>
               <div class="alert alert-danger mt-2">
-                  <?= $error=$validation->getError('passR');?>
+                  <?= $error=$validation->getError('baja');?>
               </div>
             <?php }?>
             

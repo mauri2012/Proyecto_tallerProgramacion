@@ -10,7 +10,6 @@ class login_controller extends Controller{
         echo view('front/nav_view.php');
         echo view('back/usuario/logeo_view.php');
         echo view('front/footer_view.php');
-       
     }
     public function auth(){
         $session=session();
@@ -22,10 +21,10 @@ class login_controller extends Controller{
         
         if($data){
             $pass=$data['pass'];
-            $ba=$data['baja'];  $ba=$data['baja'];  $ba=$data['baja'];  $ba=$data['baja'];  $ba=$data['baja'];
+            $ba=$data['baja'];  
             if($ba=='SI'){
                 $session->setFlashdata('msg','usuario dado de baja');
-                return redirect()->to('/login_controller');
+                return redirect()->to('/log_in');
             }
             $verify_pass=password_verify($password,$pass);
             if($verify_pass){
@@ -39,7 +38,7 @@ class login_controller extends Controller{
                     'logged_in'=>TRUE
                     ];
                 $session->set($ses_data);
-                $session->setFlashdata('msg', 'user logged successfully');
+                $session->setFlashdata('msg', 'user logged successfully. Hi '. session()->get('nombre'));
                 return redirect()->to('/log_in');
 
             }else{

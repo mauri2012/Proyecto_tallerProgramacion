@@ -33,7 +33,6 @@ $routes->get('/', 'Home::index');
 $routes->get('/quienessomos','Home::quienes_somos');
 $routes->get('/contacto','Home::contacto');
 $routes->get('/terminos_usos','Home::terminos_y_usos');
-$routes->get('/producto','Home::producto');
 $routes->get('/shopping','Home::carrito');
 
 //registro
@@ -43,6 +42,25 @@ $routes->post('/enviar-form', 'Usuario_controller::formValidation');
 $routes->get('/log_in','login_controller');
 $routes->post('/enviar-login','login_controller::auth');
 $routes->get('/log_out','login_controller::logout');
+//admin
+$routes->get('/userview','admin_controller');
+$routes->get('/bajaActualizarNO','admin_controller::cambiarValorNO');
+$routes->get('/bajaActualizarSI','admin_controller::cambiarValorSI');
+$routes->get('/perfilActualizar','admin_controller::cambiarPerfil');
+$routes->get('/editarUsuario','admin_controller::userEdit');
+$routes->post('/cambios-form','cambios_usuario_controller::formValidation');
+$routes->get('/usuarios_baja','admin_controller::userBaja');
+//producto
+$routes->get('/producto','producto_controller::producto');
+$routes->get('/productoview','producto_controller');
+$routes->get('/productRegister','registrar_producto_controller::create');
+$routes->post('/validarProducto','registrar_producto_controller::formValidation');
+$routes->post('/actualizarProducto','actualizar_producto_controller::formValidation');
+$routes->get('/CambiarEliminarNO','producto_controller::EliminarNO');
+$routes->get('/CambiarEliminarSI','producto_controller::EliminarSI');
+$routes->get('/editarProducto','producto_controller::productEdit');
+//$routes->get('/eliminadosProductos','producto_controller::deletedProducts');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

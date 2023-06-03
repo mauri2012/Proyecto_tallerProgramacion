@@ -9,7 +9,8 @@ class admin_controller extends Controller{
  }
     public function index(){
         $unModelo=new formModel();
-        $data["users"]=$unModelo->readUsers();
+        $data['users']=$unModelo->readUsuarios();
+        
         $data['titulo']='admin controller';
         $data['bandera']=true;
         echo view('front/head_view.php',$data);

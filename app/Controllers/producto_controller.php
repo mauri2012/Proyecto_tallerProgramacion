@@ -2,11 +2,14 @@
 namespace App\Controllers;
 Use App\Models\ProductModel;
 Use App\Models\categoriaModel;
+Use App\Models\formModel;
+Use App\Models\detallesVentaModel;
+Use App\Models\cabeceraVentaModel;
 use CodeIgniter\Controller;
 
 class producto_controller extends Controller{
     public function __construct(){
-    helper('form');
+    helper('form','session');
     }
     public function index(){
         $unModelo=new ProductModel();
@@ -39,10 +42,11 @@ class producto_controller extends Controller{
     }
     public function productEdit(){
         $unModelo=new ProductModel();
+        $unaCategoria=new categoriaModel();
         $id=$this->request->getVar('id');
         $data['titulo']='modificar producto';
         $dato['datos']=$unModelo->findID($id);
-        
+        $dato['categorias']=$unaCategoria->readCategorias();
         echo view('front/head_view.php',$data);
         echo view('front/nav_view.php');
         echo view('back/modificar_producto.php', $dato);
@@ -50,15 +54,63 @@ class producto_controller extends Controller{
     }
 
     public function producto(){
+        $unaCategoriaId2=$this->request->getVar('categoria');
+        $unaCategoriaId=1;
         $unProducto=new ProductModel();
+        $unUsuario=new formModel();
+        $unaCategoria=new categoriaModel();
         $data['titulo']='producto';
+        print_r($unaCategoriaId .'cat :'. $unaCategoriaId2);
         $data['products']=$unProducto->LeerProductos();
+
+        $data['categorias']=$unaCategoria->readCategorias();
+
         echo view('front/head_view.php',$data);
         echo view('front/nav_view.php');
         echo view('front/producto.php',$data);
         echo view('front/footer_view.php');
     }
+    public function carrito_view(){
+        $unaVenta=new detallesVentaModel(); 
+        $data['titulo']='cart';
+        $data['products']=$unaVenta->readAll(session()->get('id'));
+        echo view('front/head_view.php',$data);
+        echo view('front/nav_view.php');
+        echo view('back/cart.php');
+        echo view('front/footer_view.php');
+    }
+    public function todasVentas(){
+        $unaVenta=new cabeceraVentaModel(); 
+        $data['titulo']='shopping cart';
+        if(session()->get('perfil_id')!=1){
+            $data['products']=$unaVenta->readCabecera();
+        }else{
+            $data['products']=$unaVenta->readCabeceraAdmin();
+        }
+        
+ 
+        echo view('front/head_view.php',$data);
+        echo view('front/nav_view.php');
+        echo view('front/shopping_cart.php');
+        echo view('front/footer_view.php');
+    }
+    public function detalle_view(){
+        $unaVenta=new detallesVentaModel(); 
+        
+        $ventaid=$this->request->getVar('venta_id');
 
+        $data['titulo']='detalles';
+        if(session()->get('perfil_id')==1){
+            $data['products']=$unaVenta->readDetallesAdmin($ventaid);
+       
+        }else{
+            $data['products']=$unaVenta->readDetalles(session()->get('id'),$ventaid);
+        }
+        echo view('front/head_view.php',$data);
+        echo view('front/nav_view.php');
+        echo view('front/shopping_cart_detalles.php');
+        echo view('front/footer_view.php');
+    }
 }
 
 

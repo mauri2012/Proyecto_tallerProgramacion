@@ -33,7 +33,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/quienessomos','Home::quienes_somos');
 $routes->get('/contacto','Home::contacto');
 $routes->get('/terminos_usos','Home::terminos_y_usos');
-$routes->get('/shopping','Home::carrito');
+
 
 //registro
 $routes->get('/sign_up', 'Usuario_controller::create');
@@ -59,6 +59,15 @@ $routes->post('/actualizarProducto','actualizar_producto_controller::formValidat
 $routes->get('/CambiarEliminarNO','producto_controller::EliminarNO');
 $routes->get('/CambiarEliminarSI','producto_controller::EliminarSI');
 $routes->get('/editarProducto','producto_controller::productEdit');
+//carrito
+$routes->get('/carrito','lista_controller::add');
+$routes->get('/shopping','producto_controller::todasVentas');
+$routes->get('/carro','producto_controller::carrito_view');
+$routes->post('/carrito_agrega','carrito_controller::add');
+$routes->get('/eliminar-carrito','carrito_controller::remove');
+$routes->get('/detalleVenta','producto_controller::detalle_view');
+$routes->get('/borrar','carrito_controller::borrar_carrito');
+
 //$routes->get('/eliminadosProductos','producto_controller::deletedProducts');
 
 /*

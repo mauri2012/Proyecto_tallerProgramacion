@@ -1,6 +1,8 @@
 <div class="container-fluid p-5 row"  style="background-color:#f3a1a0">
    
-    <?php $validation = \Config\Services::validation(); ?>
+    <?php $validation = \Config\Services::validation(); 
+    ?>
+    
     <div class="col-4"></div>
     <div class="bg-light col-5 border" >
         <h2>Ingresar Producto</h2>
@@ -70,8 +72,16 @@
                     <?php } ?>  
             </div>
             <div class="my-3 col-8">
-                <label class="form-label" >categoria:</label>
-                <input class="form-control" value="<?php echo set_value('categoria_id')?>"type="text" placeholder="(1-2)" name="categoria_id">
+                
+                <select name="" value="" id="" class="form-select">
+                    <option value="">Seleccionar Categoria</option>
+                    <?php foreach($categorias as $categoria){?>
+                    <option value="<?=  $categoria['descripcion']?>" >
+                        <?= $categoria['descripcion'] ?>
+                    </option>
+                    <?php }?>
+                </select>
+           
                 <?php if ($validation->getError('categoria_id')) { ?>
                     <div class='alert alert-danger mt-2'>
                         <?= $error = $validation->getError('categoria_id'); ?>

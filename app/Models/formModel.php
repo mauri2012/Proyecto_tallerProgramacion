@@ -8,8 +8,16 @@ class formModel extends Model{
     protected $primaryKey='id';
     protected $allowedFields=['nombre','apellido','email','usuario','pass','perfil_id','baja','created_at'];
 
-
+    public function readUsuarios(){
+            $this->select('u.id ,u.perfil_id ,u.nombre, u.apellido, u.email ,u.usuario, u.baja, p.descripcion')
+            ->from('usuarios u')
+            ->join('perfiles p','u.perfil_id=p.id')
+            ->groupBy('u.id');
+            return $this->get()->getResultArray();
+        //para hacer: preguntar a chatgpt porque no funciona esta funcion si la analoga en prodyctos si 
+    }
     public function readUSers(){
+        
         return $this->findAll();
     }
     public function bajados(){

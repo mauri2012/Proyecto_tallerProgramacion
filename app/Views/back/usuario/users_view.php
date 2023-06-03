@@ -18,13 +18,14 @@
                 </tr>    
             </thead>
             <tbody>
+                
                 <?php foreach($users as $user){ ?>
                 <tr>
                 
                     <th><?= $user['nombre'] ?></th>
                     <th><?= $user['apellido'] ?></th>
                     <th><?= $user['email'] ?></th>
-                    <th><?= $user['perfil_id'] ?></th>
+                    <th><?= $user['descripcion'] ?></th>
                     <th><?= $user['baja'] ?></th>
                     <?php if($user['baja']!='NO'){?>
                         <th><a type="input" class="btn btn-danger" href="<?php echo base_url('bajaActualizarNO?id='.$user['id'])?>">X</a></th>

@@ -36,10 +36,10 @@ class ProductModel extends Model{
         $query->update();
     }
     public function laCategoria(){
-        $this->select('p.id,p.nombre_producto,p.precio_venta,p.stock,p.stock_min,p.eliminar,p.imagen,c.descripcion');
-        $this->from('productos p');
-        $this->join('categorias c','p.categoria_id=c.id');
-        $this->groupBy('p.id');      
+        $this->select('p.id,p.nombre_producto,p.precio_venta,p.stock,p.stock_min,p.eliminar,p.imagen,c.descripcion')
+        ->from('productos p')
+        ->join('categorias c','p.categoria_id=c.id')
+        ->groupBy('p.id');      
         return $this->get()->getResultArray();
     }
 

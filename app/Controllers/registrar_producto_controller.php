@@ -3,14 +3,15 @@ namespace App\Controllers;
 Use App\Models\ProductModel;
 use CodeIgniter\Controller;
 use CodeIgniter\Validation\Validation;
-
+use App\Models\categoriaModel;
 class registrar_producto_controller extends Controller{
     public function __construct(){
         helper(['form', 'url','validation']);
        
     }
     public function create(){
-      
+        $unaCategoria=new categoriaModel();
+        $data['categorias']=$unaCategoria->readCategorias();
         $data['titulo']='registrar producto';
         echo view('front/head_view.php',$data);
         echo view('front/nav_view.php');

@@ -36,7 +36,7 @@
                         <th><a type="input" class="btn btn-danger" href="<?php echo base_url('CambiarEliminarNO?id=' . $producto['id'] )?>">X</a></th>
                     <?php }else{ ?>
                     <th><a type="input" class="btn btn-success" href="<?php echo base_url('CambiarEliminarSI?id=' . $producto['id'])?>">*</a></th>
-                    <?php } print_r($producto['id'])?>
+                    <?php } ?>
                     <th><a type="input" class="btn btn-secondary" href="<?php echo base_url('editarProducto?id='. $producto['id'])?>">cambiar</a></th>
                     
                 </tr>

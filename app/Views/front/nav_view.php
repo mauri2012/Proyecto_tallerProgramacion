@@ -24,16 +24,21 @@
 					<li class="nav-item"><a class="nav-link" href="<?php echo base_url('')?>">Home</a></li>
 					<?php if(session()->get('perfil_id')==2){ ?>	
 					<li class="nav-item"><a class="nav-link" href="<?php echo base_url('producto');?>"><i class="bi bi-shop-window"></i></a></li>
-					<li class="nav-item"><a class="nav-link " href="<?php echo base_url('shopping');?>">					
+					<li class="nav-item"><a class="nav-link " href="<?php echo base_url('carro');?>">					
 						<i class="bi bi-basket2-fill"></i>
 					</a></li>
+
 					<?php } ?>
+					<li class="nav-item">
+						<a class="nav-link " href="<?php echo base_url('shopping');?>">					
+						compras totales</a>
+					</li>
 					<?php if(session()->get('perfil_id')==1){ ?>
 						<li class="nav-item">
 							<a class="nav-link" href="<?php echo base_url('/userview')?>">user_view</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="<?php echo base_url('/productoview')?>">producto_view</a>
+							<a class="nav-link" href="<?php echo base_url('/productoview?')?>">producto_view</a>
 						</li>
 					<?php } ?>
 			    </ul>

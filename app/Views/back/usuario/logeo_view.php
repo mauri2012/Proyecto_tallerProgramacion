@@ -3,7 +3,7 @@
         <div class="col-md-4"></div>
         <div class="col-md-4 border p-3 bg-light">
             <?php if(session()->has('msg')){?>
-                <div class="alert alert-success">
+                <div class="alert alert-success p-5">
                     <?= session()->getFlashdata('msg'); ?>
                 </div>
             <?php } ?>

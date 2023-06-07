@@ -26,11 +26,12 @@ class lista_controller extends BaseController{
         foreach($productos as $producto){
             $montoTotal=$producto['price'] * $producto['qty']+$montoTotal ;
         }
-
+        
         $idCabecera=$ventaCabecera->insert([
             'usuario_id'=> session()->get('id'),
             'total_venta' => $montoTotal
         ]);
+        
         foreach($productos as $producto){
             $ventaDetalle->insert([
                 'venta_id'=> $idCabecera,
@@ -38,7 +39,11 @@ class lista_controller extends BaseController{
                 'cantidad' =>$producto['qty'],
                 'precio' => $producto['price']
             ]);
+
+            $stockFinal=$producto['stock']-$producto['qty'];
+            $unProducto->update($producto['id'],['stock' => $stockFinal ]);
         }
+        
         //$cart->destroy();
         return redirect()->to('shopping');
     }

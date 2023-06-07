@@ -23,9 +23,27 @@ class carrito_controller extends BaseController{
             'qty'=>1,
             'price'=>$request->getPost('precio'),
             'name'=>$request->getPost('nombre'),
+            'stock'=>$request->getPost('stock'),
         ));
         
-        return redirect()->to('producto');
+        //return redirect()->to('producto');
+        return redirect()->back();
+    }
+    public function descontar(){
+        $cart= \Config\Services::Cart();
+        $request= \Config\Services::request();
+        $cant=$request->getVar('cantidad');
+        if($cant >1){
+        $rowid=$request->getVar('rowid');
+        $newQty=$cant - 1;
+
+        $data=array('rowid' => $rowid,'qty' => $newQty);
+        //dd($data);
+        var_dump($data);
+        $cart->update($data);
+        //return redirect()->to('producto');
+        }
+        return redirect()->back();
     }
     public function remove(){
         $rowid=$this->request->getVar('rowid');

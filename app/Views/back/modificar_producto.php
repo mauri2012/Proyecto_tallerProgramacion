@@ -74,12 +74,13 @@
                     <?php } ?>  
             </div>
             <div class="my-3 col-8">
-            <select name="" value="" id="" class="form-select">
-                    <option value="<?php echo set_value('categoria',$datos['categoria_id'])?>"></option>
+            <?php// dd($categorias)?>
+            <select name="categoria_id" value="" id="categoria_id" class="form-select">
+                    <option value="">Seleccionar Categoria</option>
                     <?php foreach($categorias as $categoria){?>
-                    <option value="<?=  $categoria['descripcion']?>" >
-                        <?= $categoria['descripcion'] ?>
-                    </option>
+                        <option value="<?=  $categoria['id']?>" <?= set_select('categoria_id', $categoria['id'], $categoria['id'] == $datos['categoria_id']) ?>>
+                                <?= $categoria['descripcion'] ?>
+                        </option>
                     <?php }?>
                 </select>
                 
@@ -90,8 +91,9 @@
                     <?php } ?>  
             </div> 
             <div class="my-3 col-8">
+    
                 <label class="form-label" >Descripcion:</label>
-                <textarea  class="form-control" name="descripcion" id="" cols="30" rows="10"></textarea>
+                <textarea  class="form-control" name="descripcion" id="" cols="30" rows="10" ><?php echo set_value('descripcion',$datos['descripcion'])?></textarea>
             </div>                         
             <input type="submit" class="btn btn-success">
             <input type="reset" class="btn btn-danger">

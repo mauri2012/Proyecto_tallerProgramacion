@@ -50,7 +50,8 @@ class registrar_producto_controller extends Controller{
                     'precio'=> $this->request->getVar('precio'),
                     'precio_venta'=> $this->request->getVar('precio_venta'),
                     'stock'=> $this->request->getVar('stock'),
-                    'stock_min'=> $this->request->getVar('stock_min'), 
+                    'stock_min'=> $this->request->getVar('stock_min'),
+                    'descripcion' => $this->request->getVar('descripcion'), 
                 ]);  
             
                 session()->setFlashdata('success', 'Producto registrado con exito');

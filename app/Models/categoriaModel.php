@@ -12,6 +12,7 @@ class categoriaModel extends Model{
     }
     public function readCategorias(){
         return $this->findAll();
+        
     }
 }
 

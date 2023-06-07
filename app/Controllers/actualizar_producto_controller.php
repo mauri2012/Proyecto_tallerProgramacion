@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 Use App\Models\ProductModel;
+Use App\Models\categoriaModel;
 use CodeIgniter\Controller;
 use CodeIgniter\Validation\Validation;
 
@@ -25,9 +26,10 @@ class actualizar_producto_controller extends Controller{
        $formModel = new ProductModel();
        $id=$this->request->getVar('id');
         if (!$input) {
-
+            $unaCategoria=new categoriaModel();
             $data['titulo']='Alta Producto'; 
             $dato['datos']=$formModel->findID($id);
+            $data['categorias'] = $unaCategoria->readCategorias(); 
             echo view('front/head_view',$data);
             echo view('front/nav_view');
             echo view('back/modificar_producto.php',$dato , ['validation' => $this->validator]);
@@ -42,11 +44,12 @@ class actualizar_producto_controller extends Controller{
                 $data=[
                     'nombre_producto' => $this->request->getVar('nombre_producto'),
                     'imagen'=> $img->getName(),
-                    'categoria_id'=> $this->request->getVar('categoria_id'),
+                    'categoria_id'=> $this->request->getPost('categoria_id'),
                     'precio'=> $this->request->getVar('precio'),
                     'precio_venta'=> $this->request->getVar('precio_venta'),
                     'stock'=> $this->request->getVar('stock'),
                     'stock_min'=> $this->request->getVar('stock_min'), 
+                    'descripcion' =>$this->request->getVar('descripcion'),
                 ];
                 
                 

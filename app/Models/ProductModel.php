@@ -7,7 +7,7 @@ class ProductModel extends Model{
 
     protected $table='productos';
     protected $primaryKey='id';
-    protected $allowedFields=['nombre_producto','imagen','categoria_id','precio','precio_venta','stock','stock_min','eliminar','created_at'];
+    protected $allowedFields=['nombre_producto','imagen','categoria_id','precio','precio_venta','stock','stock_min','eliminar','descripcion','created_at'];
 
     public function LeerProductos(){          
         return $this->findAll();

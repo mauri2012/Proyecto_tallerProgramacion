@@ -43,10 +43,15 @@ class producto_controller extends Controller{
     public function productEdit(){
         $unModelo=new ProductModel();
         $unaCategoria=new categoriaModel();
+
         $id=$this->request->getVar('id');
+
         $data['titulo']='modificar producto';
         $dato['datos']=$unModelo->findID($id);
         $dato['categorias']=$unaCategoria->readCategorias();
+
+        //dd($dato['categorias']);
+
         echo view('front/head_view.php',$data);
         echo view('front/nav_view.php');
         echo view('back/modificar_producto.php', $dato);
@@ -54,17 +59,17 @@ class producto_controller extends Controller{
     }
 
     public function producto(){
-        $unaCategoriaId2=$this->request->getVar('categoria');
-        $unaCategoriaId=1;
+        $unaCategoriaId=$this->request->getVar('categoria');
+    
         $unProducto=new ProductModel();
         $unUsuario=new formModel();
         $unaCategoria=new categoriaModel();
         $data['titulo']='producto';
-        print_r($unaCategoriaId .'cat :'. $unaCategoriaId2);
+  
         $data['products']=$unProducto->LeerProductos();
 
         $data['categorias']=$unaCategoria->readCategorias();
-
+        $data['categoriaChoosen']=$unaCategoriaId;
         echo view('front/head_view.php',$data);
         echo view('front/nav_view.php');
         echo view('front/producto.php',$data);

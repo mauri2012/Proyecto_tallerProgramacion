@@ -73,10 +73,10 @@
             </div>
             <div class="my-3 col-8">
                 
-                <select name="" value="" id="" class="form-select">
-                    <option value="">Seleccionar Categoria</option>
+                <select name="categoria_id" value="" id="" class="form-select">
+                    <option value="0">Seleccionar Categoria</option>
                     <?php foreach($categorias as $categoria){?>
-                    <option value="<?=  $categoria['descripcion']?>" >
+                    <option value="<?=  $categoria['id']?>" >
                         <?= $categoria['descripcion'] ?>
                     </option>
                     <?php }?>
@@ -90,7 +90,7 @@
             </div> 
             <div class="my-3 col-8">
                 <label class="form-label" >Descripcion:</label>
-                <textarea  class="form-control" name="descripcion" id="" cols="30" rows="10"></textarea>
+                <textarea  class="form-control" name="descripcion" id="" value="<?php echo set_value('descripcion')?>" cols="30" rows="10"></textarea>
             </div>                
             <button type="submit" class="btn btn-primary">Enviar</button>
             <button type="reset" class="btn btn-success">Reiniciar</button>

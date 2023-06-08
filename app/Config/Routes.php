@@ -31,7 +31,6 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/quienessomos','Home::quienes_somos');
-$routes->get('/contacto','Home::contacto');
 $routes->get('/terminos_usos','Home::terminos_y_usos');
 
 
@@ -68,6 +67,12 @@ $routes->get('/eliminar-carrito','carrito_controller::remove',['filter'=>'auth']
 $routes->get('/detalleVenta','producto_controller::detalle_view',['filter'=>'auth']);
 $routes->get('/borrar','carrito_controller::borrar_carrito',['filter'=>'auth']);
 $routes->get('/unoMenosCart','carrito_controller::descontar',['filter'=>'auth']);
+
+
+//contacto 
+$routes->get('/contacto','Home::contacto');
+$routes->post('/consulta','producto_controller::consultas');
+$routes->get('/leidoActualizar','Home::cambioContacto');
 //$routes->get('/eliminadosProductos','producto_controller::deletedProducts');
 
 /*

@@ -5,6 +5,7 @@ Use App\Models\categoriaModel;
 Use App\Models\formModel;
 Use App\Models\detallesVentaModel;
 Use App\Models\cabeceraVentaModel;
+Use App\Models\consultasModel;
 use CodeIgniter\Controller;
 
 class producto_controller extends Controller{
@@ -115,6 +116,37 @@ class producto_controller extends Controller{
         echo view('front/nav_view.php');
         echo view('front/shopping_cart_detalles.php');
         echo view('front/footer_view.php');
+    }
+    public function consultas(){
+        $input = $this->validate([
+            'Asunto'=> 'required|max_length[20]',
+            'descripcion'         => 'required|min_length[5]',
+            'Email'   => 'required'
+        ]);
+      
+       $unaConsulta = new consultasModel();
+        
+        if (!$input) {
+            $data['titulo']='Contacto'; 
+            echo view('front/head_view',$data);
+            echo view('front/nav_view');
+            echo view('front/contacto.php', ['validation' => $this->validator]);
+            echo view('front/footer_view');
+        } else {
+
+    
+                $unaConsulta->save([
+                    'Asunto'     => $this->request->getVar('Asunto'),
+                    'descripcion'=> $this->request->getVar('descripcion'),
+                    'Email'      => $this->request->getVar('Email'),
+                ]);  
+                
+                session()->setFlashdata('success', 'consulta registrada con exito');
+            
+            return redirect()->to('/contacto');
+
+        }
+            
     }
 }
 

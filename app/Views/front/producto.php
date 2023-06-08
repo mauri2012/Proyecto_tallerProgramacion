@@ -2,8 +2,8 @@
 <div class="row p-5" style="background-color:#f3a1a0">
     <div>
         <form action="<?php echo base_url('producto')?>">
-            <select name="" value="" id="categoria" name="categoria" class="form-select">
-                    <option value="">Selecione una categoria</option>
+            <select  value="" id="categoria" name="categoria" class="form-select">
+                    <option value="0">Selecione una categoria</option>
                     <?php foreach($categorias as $categoria){?>
                     <option value="<?=$categoria['id']?>" >
                         <?= $categoria['descripcion'] ?> 
@@ -11,13 +11,14 @@
 
                     <?php echo $categoria['id']; }?>
             </select>
-            <a type="submit" class="btn btn-success">search</a>
+            <button type="submit" class="btn btn-success">search</button>
         </form>
     </div>    
 <?php
 
     
     foreach($products as $product){
+      if($categoriaChoosen==$product['categoria_id'] || $categoriaChoosen==0){  
         $img=$product['imagen'];
         if($product['eliminar']=='NO'){
             
@@ -28,15 +29,16 @@
         <div class="card-header">Nombre: <?=$product['nombre_producto']?></div>
         <div class="card-body">
             <p class="card-text">
-                la zapatilla numero uno tiene una comodidad muy amplia, muchos de nuestros clientes se ven sadisfechos con ella, cuenta con una amplia aereodinamica y duracion
+                <?=$product['descripcion']?>
             </p>
         </div>
          <?php
-         echo form_open('carrito_agrega');
-         echo form_hidden('id',$product['id']);
-         echo form_hidden('precio',$product['precio_venta']);
-         echo form_hidden('nombre',$product['nombre_producto']);
 
+            echo form_open('carrito_agrega');
+            echo form_hidden('id',$product['id']);
+            echo form_hidden('precio',$product['precio_venta']);
+            echo form_hidden('nombre',$product['nombre_producto']);
+            echo form_hidden('stock',$product['stock']);
             $btn=array(
                 'class'=>'btn btn-secondary',
                 'value' => 'agregar al carro',
@@ -46,13 +48,16 @@
         
         ?>     
         <div class="card-footer">
-        <?php    
+        <?php if($product['stock']>$product['stock_min']){    
             echo form_submit($btn);
             echo form_close();            
-        ?>
+        }else{?>
+            <h3>no stock disponible</h3>
+        <?php } ?>
+
         </div>
     </div>
         
-    <?php }}
+    <?php }}}
     ?>
 </div>

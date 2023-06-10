@@ -14,7 +14,7 @@
     <link rel="stylesheet"  href="<?php echo base_url('assets/DataTables/datatables.min.css');?>">
     <link rel="stylesheet"  href="<?php echo base_url('/assets/DataTables/DataTables-1.13.4/css/dataTables.bootstrap5.min.css');?>">
 
-    <link rel="stylesheet"  href="<?php echo base_url('/assets/DataTables/DataTables-1.13.4/css/jquery.dataTables.min.css');?>">
+  
 
 
 </head>

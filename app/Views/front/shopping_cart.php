@@ -2,10 +2,16 @@
     
     <div class="p-5 m-5 container bg-light">
     <div class="p-5">
-        <div class="text-center"><h1>venta</h1></div>
+    <div class="text-center">
+        <?php if(session()->get('perfil_id')==1){?>
+            <h1>ventas</h1>
+        <?php }else{ ?>
+            <h1>Compras</h1>
+        <?php }?>
+    </div>
     <table class="table" id="venta">
             <thead>
-                <tr class="table-active">
+                <tr class="table-dark table-active">
                     <th>ID</th>
                     <th>Fecha</th>
                     <th>usuario</th> 
@@ -36,6 +42,6 @@
 
 
 <script type="text/javascript" src="assets/DataTables/DataTables-1.13.4/js/prueba.min.js"></script>
-<script type="text/javascript" src="assets/DataTables/DataTables-1.13.4/js/jquery.dataTables.min.js"></script>
+
 <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
 <script type="text/javascript" src="assets/js/tables.js"></script>

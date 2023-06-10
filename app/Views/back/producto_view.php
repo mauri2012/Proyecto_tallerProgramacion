@@ -8,7 +8,7 @@
     <a type="input" class="btn btn-danger" href="<?php echo base_url('/productoview?bandera=' . true)?>">productos  eliminados</a>
     <?php } ?>
     <table class="table" id="venta">
-            <thead>
+            <thead class="table-active">
                 <tr>
                     <th>Nombre Producto</th>
                     <th>Categoria</th>

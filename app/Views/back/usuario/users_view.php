@@ -8,7 +8,7 @@
         <a type="input" class="btn btn-success" href="<?php echo base_url('/userview?bandera='.true )?>">todos los usuarios</a>  
     <?php } ?>
         <table class="table" id="venta">
-            <thead>
+            <thead class="table-active">
                 <tr>
                     <th>Nombre</th>
                     <th>Apellido</th>

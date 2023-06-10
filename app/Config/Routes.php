@@ -38,20 +38,20 @@ $routes->get('/terminos_usos','Home::terminos_y_usos');
 $routes->get('/sign_up', 'Usuario_controller::create');
 $routes->post('/enviar-form', 'Usuario_controller::formValidation');
 //log in
-$routes->get('/log_in','login_controller');
+$routes->get('/log_in','login_controller',['filter'=>'bajado']);
 $routes->post('/enviar-login','login_controller::auth');
 $routes->get('/log_out','login_controller::logout');
 //admin
-$routes->get('/userview','admin_controller',['filter'=>'auth']);
-$routes->get('/bajaActualizarNO','admin_controller::cambiarValorNO',['filter'=>'auth']);
-$routes->get('/bajaActualizarSI','admin_controller::cambiarValorSI',['filter'=>'auth']);
-$routes->get('/perfilActualizar','admin_controller::cambiarPerfil',['filter'=>'auth']);
-$routes->get('/editarUsuario','admin_controller::userEdit',['filter'=>'auth']);
-$routes->post('/cambios-form','cambios_usuario_controller::formValidation',['filter'=>'auth']);
-$routes->get('/usuarios_baja','admin_controller::userBaja',['filter'=>'auth']);
+$routes->get('/userview','admin_controller',['filter'=>'admin']);
+$routes->get('/bajaActualizarNO','admin_controller::cambiarValorNO',['filter'=>'admin']);
+$routes->get('/bajaActualizarSI','admin_controller::cambiarValorSI',['filter'=>'admin']);
+$routes->get('/perfilActualizar','admin_controller::cambiarPerfil',['filter'=>'admin']);
+$routes->get('/editarUsuario','admin_controller::userEdit',['filter'=>'admin']);
+$routes->post('/cambios-form','cambios_usuario_controller::formValidation',['filter'=>'admin']);
+$routes->get('/usuarios_baja','admin_controller::userBaja',['filter'=>'admin']);
 //producto
 $routes->get('/producto','producto_controller::producto',['filter'=>'auth']);
-$routes->get('/productoview','producto_controller',['filter'=>'auth']);
+$routes->get('/productoview','producto_controller',['filter'=>'admin']);
 $routes->get('/productRegister','registrar_producto_controller::create',['filter'=>'auth']);
 $routes->post('/validarProducto','registrar_producto_controller::formValidation',['filter'=>'auth']);
 $routes->post('/actualizarProducto','actualizar_producto_controller::formValidation',['filter'=>'auth']);

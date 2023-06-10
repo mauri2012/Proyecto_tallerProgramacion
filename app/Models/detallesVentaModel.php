@@ -10,6 +10,7 @@ class detallesVentaModel extends Model{
     public function readDetalles($id,$ventaid){
         $this->from('ventas_detalle d')
             ->join('ventas_cabecera c','d.venta_id=c.id')
+            ->join('productos p','p.id=d.producto_id')
             ->groupBy('d.id')
             ->where('c.usuario_id',$id )
             ->where('d.venta_id',$ventaid);
@@ -18,6 +19,7 @@ class detallesVentaModel extends Model{
     public function readDetallesAdmin($ventaid){
         $this->from('ventas_detalle d')
             ->join('ventas_cabecera c','d.venta_id=c.id')
+            ->join('productos p','p.id=d.producto_id')
             ->where('d.venta_id',$ventaid)
             ->groupBy('d.id');
         return $this->get()->getResultArray();

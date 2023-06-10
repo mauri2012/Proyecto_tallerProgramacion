@@ -3,7 +3,7 @@
     <div class="p-5 m-5 container bg-light">
     <div class="p-5">
         <div class="text-center"><h1>venta</h1></div>
-    <table class="table">
+    <table class="table" id="venta">
             <thead>
                 <tr class="table-active">
                     <th>ID</th>
@@ -11,7 +11,7 @@
                     <th>usuario</th> 
                     <th>precio total</th>                    
                     <th>detalles</th>
-                   
+                                       
                 </tr>    
             </thead>
             <tbody>
@@ -33,3 +33,9 @@
     </div>
     </div>
 </section>
+
+
+<script type="text/javascript" src="assets/DataTables/DataTables-1.13.4/js/prueba.min.js"></script>
+<script type="text/javascript" src="assets/DataTables/DataTables-1.13.4/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
+<script type="text/javascript" src="assets/js/tables.js"></script>

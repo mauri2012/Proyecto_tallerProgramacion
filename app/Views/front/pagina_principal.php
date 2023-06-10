@@ -1,4 +1,15 @@
-    <section class="container-fluid px-0 h-50">
+<?php
+    if(session()->getFlashdata('baja')){
+        echo "
+        <div class='mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible'>
+        <button type='button' class='btn-close' data-bs-dismiss='alert'></button>" . session()->getFlashdata('baja') . "
+      </div>";
+      } 
+    
+
+?>
+
+<section class="container-fluid px-0 h-50">
         <!-- Carousel -->
         <div id="demo" class="carousel slide h-100 " data-bs-ride="carousel">
 

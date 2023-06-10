@@ -88,6 +88,7 @@ class producto_controller extends Controller{
     public function todasVentas(){
         $unaVenta=new cabeceraVentaModel(); 
         $data['titulo']='shopping cart';
+  
         if(session()->get('perfil_id')!=1){
             $data['products']=$unaVenta->readCabecera();
         }else{

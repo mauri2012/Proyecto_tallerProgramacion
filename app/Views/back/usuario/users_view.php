@@ -7,7 +7,7 @@
     <?php }else{?>
         <a type="input" class="btn btn-success" href="<?php echo base_url('/userview?bandera='.true )?>">todos los usuarios</a>  
     <?php } ?>
-        <table class="table">
+        <table class="table" id="venta">
             <thead>
                 <tr>
                     <th>Nombre</th>
@@ -15,6 +15,9 @@
                     <th>Email</th>
                     <th>perfil</th>
                     <th>Baja</th>
+                    <th>dar de baja</th>
+                    <th>tipo</th>
+                    <th>editar</th>
                 </tr>    
             </thead>
             <tbody>
@@ -42,3 +45,10 @@
         </table>
     </div>
 </section>
+<script type="text/javascript" src="assets/DataTables/datatables.js"></script>
+
+<script type="text/javascript" src="assets/DataTables/DataTables-1.13.4/js/prueba.min.js"></script>
+
+<script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
+
+<script type="text/javascript" src="assets/js/tables.js"></script>

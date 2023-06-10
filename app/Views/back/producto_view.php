@@ -7,7 +7,7 @@
     <?php }else{?>
     <a type="input" class="btn btn-danger" href="<?php echo base_url('/productoview?bandera=' . true)?>">productos  eliminados</a>
     <?php } ?>
-    <table class="table">
+    <table class="table" id="venta">
             <thead>
                 <tr>
                     <th>Nombre Producto</th>
@@ -17,6 +17,8 @@
                     <th>stock minimo</th>
                     <th>eliminado</th>
                     <th>imagen name</th>
+                    <th>eliminar</th>
+                    <th>editar</th>
                 </tr>    
             </thead>
             <tbody>
@@ -46,3 +48,7 @@
         </table>
     </div>
 </section>
+<script type="text/javascript" src="assets/DataTables/DataTables-1.13.4/js/prueba.min.js"></script>
+<script type="text/javascript" src="assets/DataTables/DataTables-1.13.4/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
+<script type="text/javascript" src="assets/js/tables.js"></script>

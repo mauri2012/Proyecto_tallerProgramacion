@@ -14,7 +14,7 @@
             <div class="col-10 my-3">
             <input class="form-control" type="hidden" value="<?php echo set_value('id',$datos['id']);?>" name="id"  >      
                 <label class="form-label text-left" >Nombre:</label>
-                <input class="form-control" type="text" value=<?php echo set_value('nombre_producto', $datos['nombre_producto']); ?>" placeholder="Ingrese nombre producto" name="nombre_producto">              
+                <input class="form-control" type="text" value="<?php echo set_value('nombre_producto', $datos['nombre_producto']); ?>" placeholder="Ingrese nombre producto" name="nombre_producto">              
                 <?php if ($validation->getError('nombre_producto')) { ?>
                     <div class='alert alert-danger mt-2'>
                         <?= $error = $validation->getError('nombre_producto'); ?>

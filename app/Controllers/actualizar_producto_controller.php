@@ -2,6 +2,8 @@
 namespace App\Controllers;
 Use App\Models\ProductModel;
 Use App\Models\categoriaModel;
+Use App\Models\provinciaModel;
+
 use CodeIgniter\Controller;
 use CodeIgniter\Validation\Validation;
 
@@ -14,7 +16,7 @@ class actualizar_producto_controller extends Controller{
     public function formValidation(){
         
         $input = $this->validate([
-            'nombre_producto'=> 'required|max_length[20]',
+            'nombre_producto'=> 'required|max_length[50]',
             'imagen'         => 'uploaded[imagen]',
             'categoria_id'   => 'required|numeric|max_length[10]',
             'precio'         => 'required|numeric',
@@ -27,15 +29,17 @@ class actualizar_producto_controller extends Controller{
        $id=$this->request->getVar('id');
         if (!$input) {
             $unaCategoria=new categoriaModel();
+   
             $data['titulo']='Alta Producto'; 
             $dato['datos']=$formModel->findID($id);
             $data['categorias'] = $unaCategoria->readCategorias(); 
+    
             echo view('front/head_view',$data);
             echo view('front/nav_view');
             echo view('back/modificar_producto.php',$dato , ['validation' => $this->validator]);
             echo view('front/footer_view');
         } else {
-            session()->setFlashdata('success', 'Producto actualizado con exito b');
+          
             $img=$this->request->getFile('imagen');
             
             if(!$img->hasMoved() && $img->isValid()){

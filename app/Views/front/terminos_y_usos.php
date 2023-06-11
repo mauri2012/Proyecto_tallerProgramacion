@@ -1,4 +1,4 @@
-<section class="container my-5">
+<section class="container-fluid p-5 " style="background-color:#f3a1a0; text-align: justify;">
     <h2 class="bold">Terminos Y Usos</h2>
     <p> 
         Bienvenido a nuestro sitio web. Al acceder y utilizar nuestro sitio, aceptas los siguientes términos y condiciones de uso:

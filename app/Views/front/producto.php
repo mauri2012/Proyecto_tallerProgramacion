@@ -1,5 +1,5 @@
 
-<div class="row p-5" style="background-color:#f3a1a0">
+<div class="row p-5" style="background-color:#f3a1a0; max-width:100%;">
     <div>
         <form action="<?php echo base_url('producto')?>">
             <select  value="" id="categoria" name="categoria" class="form-select">
@@ -25,7 +25,7 @@
             ?>
         <div class="col-md-4 card">
             <img class="card-img-top" src="<?php echo base_url()?>/assets/uploads/<?=$img?>" alt="Card image">
-        <div class="card-header">Precio: <?=$product['precio']?></div>
+        <div class="card-header">Precio: <?=$product['precio_venta']?></div>
         <div class="card-header">Nombre: <?=$product['nombre_producto']?></div>
         <div class="card-body">
             <p class="card-text">

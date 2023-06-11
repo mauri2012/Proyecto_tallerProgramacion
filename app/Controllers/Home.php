@@ -37,7 +37,7 @@ class Home extends BaseController
         return redirect()->to('/contacto');
     }
     public function terminos_y_usos(){
-        $data['titulo']='contacto';
+        $data['titulo']='terminos y usos';
         echo view('front/head_view.php',$data);
         echo view('front/nav_view.php');
         echo view('front/terminos_y_usos.php');

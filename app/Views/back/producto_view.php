@@ -1,12 +1,22 @@
 <section class="p-5" style="background-color:#f3a1a0">
+<?php
+    if(session()->getFlashdata('success')){
+        echo "
+        <div class='mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible'>
+        <button type='button' class='btn-close' data-bs-dismiss='alert'></button>" . session()->getFlashdata('success') . "
+      </div>";
+      } 
     
+
+?>    
     <div class="p-5  container bg-light">
-    <a type="input" class="btn btn-success" href="<?php echo base_url('/productRegister')?>">alta productos</a>
+    <a type="input" class="btn btn-success" href="<?php echo base_url('/productRegister')?>">Alta productos</a>
     <?php if($bandera){?>
     <a type="input" class="btn btn-danger" href="<?php echo base_url('/productoview?bandera='.false)?>">productos NO eliminados</a>
     <?php }else{?>
     <a type="input" class="btn btn-danger" href="<?php echo base_url('/productoview?bandera=' . true)?>">productos  eliminados</a>
     <?php } ?>
+    <a type="input" class="btn btn-success" href="<?php echo base_url('formCategoria')?>">Alta Categoria</a> 
     <table class="table" id="venta">
             <thead class="table-active">
                 <tr>
@@ -27,6 +37,7 @@
                     
                     <th><?= $producto['nombre_producto'] ?></th>
                     <th><?= $producto['descripcion'] ?></th>
+
                     <th><?= $producto['precio_venta'] ?></th>
                     <th><?= $producto['stock'] ?></th>
                     <th><?= $producto['stock_min'] ?></th>

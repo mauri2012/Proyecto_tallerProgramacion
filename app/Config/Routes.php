@@ -46,17 +46,21 @@ $routes->get('/userview','admin_controller',['filter'=>'admin']);
 $routes->get('/bajaActualizarNO','admin_controller::cambiarValorNO',['filter'=>'admin']);
 $routes->get('/bajaActualizarSI','admin_controller::cambiarValorSI',['filter'=>'admin']);
 $routes->get('/perfilActualizar','admin_controller::cambiarPerfil',['filter'=>'admin']);
-$routes->get('/editarUsuario','admin_controller::userEdit',['filter'=>'admin']);
-$routes->post('/cambios-form','cambios_usuario_controller::formValidation',['filter'=>'admin']);
+$routes->get('/editarUsuario','admin_controller::userEdit',['filter'=>'auth']);
+$routes->post('/cambios-form','cambios_usuario_controller::formValidation',['filter'=>'auth']);
 $routes->get('/usuarios_baja','admin_controller::userBaja',['filter'=>'admin']);
+$routes->get('/formProvincia','admin_controller::formProvincia',['filter'=>'admin']);
+$routes->post('/AltaProvincia','admin_controller::agregarProvincia',['filter'=>'admin']);
+$routes->get('/formCategoria','admin_controller::formCategoria',['filter'=>'admin']);
+$routes->post('/AltaCategoria','admin_controller::agregarCategoria',['filter'=>'admin']);
 //producto
 $routes->get('/producto','producto_controller::producto',['filter'=>'auth']);
 $routes->get('/productoview','producto_controller',['filter'=>'admin']);
-$routes->get('/productRegister','registrar_producto_controller::create',['filter'=>'auth']);
-$routes->post('/validarProducto','registrar_producto_controller::formValidation',['filter'=>'auth']);
-$routes->post('/actualizarProducto','actualizar_producto_controller::formValidation',['filter'=>'auth']);
-$routes->get('/CambiarEliminarNO','producto_controller::EliminarNO',['filter'=>'auth']);
-$routes->get('/CambiarEliminarSI','producto_controller::EliminarSI',['filter'=>'auth']);
+$routes->get('/productRegister','registrar_producto_controller::create',['filter'=>'admin']);
+$routes->post('/validarProducto','registrar_producto_controller::formValidation',['filter'=>'admin']);
+$routes->post('/actualizarProducto','actualizar_producto_controller::formValidation',['filter'=>'admin']);
+$routes->get('/CambiarEliminarNO','producto_controller::EliminarNO',['filter'=>'admin']);
+$routes->get('/CambiarEliminarSI','producto_controller::EliminarSI',['filter'=>'admin']);
 $routes->get('/editarProducto','producto_controller::productEdit',['filter'=>'auth']);
 //carrito
 $routes->get('/carrito','lista_controller::add',['filter'=>'auth']);
@@ -73,6 +77,8 @@ $routes->get('/unoMenosCart','carrito_controller::descontar',['filter'=>'auth'])
 $routes->get('/contacto','Home::contacto');
 $routes->post('/consulta','producto_controller::consultas');
 $routes->get('/leidoActualizar','Home::cambioContacto');
+
+
 //$routes->get('/eliminadosProductos','producto_controller::deletedProducts');
 
 /*

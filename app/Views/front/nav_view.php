@@ -43,7 +43,8 @@
 					<?php } ?>
 			    </ul>
 				<div class="col-6 col-md-5 ">
-				<a type="submit" class="btn btn-danger" href="<?php echo base_url('/log_out')?>">log out</a>
+					<a type="submit" class="btn btn-danger" href="<?php echo base_url('/log_out')?>">log out</a>
+					<a type="input" class="btn btn-secondary" href="<?php echo base_url('/editarUsuario?id='.session()->get('id'))?>">editar</a>
 				</div>
 			</nav>
 			<?php } else {?>	

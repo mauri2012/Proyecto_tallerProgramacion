@@ -22,7 +22,7 @@
                     <th><?= $producto['nombre_producto'] ?></th>
                     <th><?= $producto['producto_id'] ?></th>
                     <th><?= $producto['cantidad'] ?></th>
-                    <th><?= number_format($producto['precio'],2)?></th>
+                    <th><?= number_format($producto['precio_venta'],2)?></th>
                    
                     
                 </tr>

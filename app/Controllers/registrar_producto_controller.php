@@ -21,7 +21,7 @@ class registrar_producto_controller extends Controller{
     public function formValidation(){
 
         $input = $this->validate([
-            'nombre_producto'=> 'required|max_length[20]',
+            'nombre_producto'=> 'required|max_length[50]',
             'imagen'         => 'uploaded[imagen]',
             'categoria_id'   => 'required|numeric|max_length[10]',
             'precio'         => 'required|numeric',

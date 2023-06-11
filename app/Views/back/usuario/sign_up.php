@@ -4,7 +4,7 @@
     </div>
     <div class="row">
     <div class="col-md-4"></div>
-    <div class="col-md-4 border p-3" style="background:white">
+    <div class="col-md-5 border p-3" style="background:white">
     <?php if (session()->getFlashdata('success')) {
       echo "
       <div class='mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible'>
@@ -13,7 +13,8 @@
     } ?> 
     <h2>Registrarse</h2>
     <form method="post" action="<?php echo base_url('/enviar-form') ?>">
-        <div class="my-3">
+      <div class="row">
+      <div class="my-3 col-6">
             <label class="form-label" >Nombre:</label>
             <input class="form-control" type="text" placeholder="Ingrese Nombre" value="<?php echo set_value('nombre')?>" name="nombre" >
             <!-- Error -->
@@ -23,7 +24,7 @@
             </div>
           <?php } ?>
         </div>
-        <div class="mb-3">
+        <div class="my-3 col-6">
           <label for="apellido" class="form-label">Apellido</label>
           <input type="text" name="apellido" class="form-control" value="<?php echo set_value('apellido')?>" placeholder="Apellido">
           <!-- Error -->
@@ -33,6 +34,7 @@
             </div>
           <?php } ?>
         </div>
+        </div>  
         <div class="my-3">
             <label class="form-label" >Email:</label>
             <input class="form-control" type="email" placeholder="Ingrese Email" name="email" value="<?php echo set_value('email') ?>">
@@ -53,7 +55,8 @@
             </div>
           <?php } ?>
         </div>
-        <div class="my-3">
+        <div class="row">
+        <div class="col-6 my-3">
             <label class="form-label" >Contraseña:</label>
             <input class="form-control" type="password" placeholder="Ingrese Contraseña" name="pass">
             <?php if($validation->getError('pass')){?>
@@ -62,7 +65,7 @@
               </div>
             <?php }?>
         </div>
-        <div class="my-3">
+        <div class="col-6 my-3">
             <label class="form-label" >Repita Contraseña:</label>
             <input class="form-control" type="password" placeholder="Ingrese Contraseña" name="passR">
   
@@ -73,9 +76,79 @@
             <?php }?>
             
         </div>
+        </div>
         <div class="my-3">
-            <label class="form-label" >dia de nacimiento:</label>
-            <input class="form-control" type="date" name="birthday">
+            <label class="form-label" >Provincia:</label>
+            <select name="provincia_id" value="" id="provincia_id" class="form-select">
+                    <option value="">Seleccionar Provincia</option>
+                    <?php foreach($provincias as $provincia){?>
+                        <option value="<?=  $provincia['id']?>">
+                                <?= $provincia['provincia'] ?>
+                        </option>
+                    <?php }?>
+                </select>
+  
+            <?php if($validation->getError('provincia')){?>
+              <div class="alert alert-danger mt-2">
+                  <?= $error=$validation->getError('provincia');?>
+              </div>
+            <?php }?>
+            
+        </div>
+        <div class="my-3">
+            <label class="form-label" >Codigo Postal:</label>
+            <input class="form-control" type="text" name="CodigoPostal" placeholder="ex:R3400">
+  
+            <?php if($validation->getError('Codigo Postal')){?>
+              <div class="alert alert-danger mt-2">
+                  <?= $error=$validation->getError('Codigo Postal');?>
+              </div>
+            <?php }?>
+            
+        </div>
+        <div class="my-3">
+            <label class="form-label" >Ciudad:</label>
+            <input class="form-control" type="text" name="ciudad">
+  
+            <?php if($validation->getError('ciudad')){?>
+              <div class="alert alert-danger mt-2">
+                  <?= $error=$validation->getError('ciudad');?>
+              </div>
+            <?php }?>
+            
+        </div>
+        <div class="my-3">
+            <label class="form-label" >barrio:</label>
+            <input class="form-control" type="text" name="barrio">
+  
+            <?php if($validation->getError('barrio')){?>
+              <div class="alert alert-danger mt-2">
+                  <?= $error=$validation->getError('barrio');?>
+              </div>
+            <?php }?>
+            
+        </div>
+        <div class="my-3 row">
+              <div class="col-6">
+            <label class="form-label" >Calle:</label>
+            <input class="form-control" type="text" name="calle">
+  
+            <?php if($validation->getError('calle')){?>
+              <div class="alert alert-danger mt-2">
+                  <?= $error=$validation->getError('calle');?>
+              </div>
+            <?php }?>
+            </div>
+            <div class="col-6">
+          <label class="form-label" >Altura:</label>
+            <input class="form-control" type="text" name="altura" placeholder="ex: 1750">
+  
+            <?php if($validation->getError('altura')){?>
+              <div class="alert alert-danger mt-2">
+                  <?= $error=$validation->getError('altura');?>
+              </div>
+            <?php }?>
+            </div>
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
         <button type="reset" class="btn btn-success">reiniciar</button>

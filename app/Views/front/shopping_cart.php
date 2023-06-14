@@ -42,6 +42,5 @@
 
 
 <script type="text/javascript" src="assets/DataTables/DataTables-1.13.4/js/prueba.min.js"></script>
-
 <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
 <script type="text/javascript" src="assets/js/tables.js"></script>

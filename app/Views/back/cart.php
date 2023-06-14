@@ -24,7 +24,8 @@
                     </thead>
                     <tbody>
                         <?php 
-                            
+                        $bandera=true;
+                        $ipP=0;
                         $acumuladorTotal=0;
                         foreach($cart as $producto){?>
                             <tr>
@@ -62,8 +63,8 @@
                                         <a type="button" class="btn btn-danger" href="<?php echo base_url('/unoMenosCart?rowid='.$producto['rowid']. '&cantidad='.$producto['qty'])?>">-</a>
                                     </td>                        
                                 <?php
-                                $bandera=true;
-                                $ipP=0;
+                                
+                                //dd($producto['stock']);
                                 if($producto['stock']<$producto['qty']){
                                     $bandera=false;
                                     $ipP=$producto['id'];

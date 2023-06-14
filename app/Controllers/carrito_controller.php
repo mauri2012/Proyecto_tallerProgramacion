@@ -27,6 +27,7 @@ class carrito_controller extends BaseController{
         ));
         
         //return redirect()->to('producto');
+        session()->setFlashdata('success', 'producto Agregado');
         return redirect()->back();
     }
     public function descontar(){

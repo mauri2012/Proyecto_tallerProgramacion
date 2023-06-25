@@ -11,7 +11,7 @@
       } 
       
       
-      if(session()->get('perfil_id')==2){
+      if(session()->get('logged_in') == false || session()->get('perfil_id')==2){
       ?>
      
     <h2 class="bold">Contacto</h2>
